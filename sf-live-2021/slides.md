@@ -6,7 +6,7 @@ title: Symfony Live France 2021
 
 Pierre Rolland 
 
-21 Apr. 2021
+29 Apr. 2021
 
 
 ---
