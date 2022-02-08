@@ -113,6 +113,8 @@ security:
 
 ### What if roles are not enough to decide if a user can access a resource?
 
+> <small>A mentor should be able to access their students information, but not ALL students information: working with roles, sometimes, is not enough</small>
+
 ----
 
 ### A voter can express its opinion
@@ -134,7 +136,7 @@ class MyVoter extends Voter
 
 ### Voters are registered in a catalog
 
-When deciding if a resource can be accessed, the manager traverses all the catalog and first calls `supports` to know if the voter is concerned, then `voteAnAttribute` to know its decision
+When deciding if a resource can be accessed, the decision manager traverses all the catalog and first calls `supports` to know if the voter is concerned, then `voteOnAttribute` to know its decision
 
 ----
 
@@ -277,6 +279,8 @@ Our strategy is **AFFIRMATIVE**.
 
 class CanSubscribeNewsletterVoter extends AbstractCurrentUserVoter
 ```
+
+> <small>Adding ROLE_SUBSCRIBE_NEWSLETTER is still a good practice, so that we're able to assign it to an actor without wondering if it's been defined or not</small>
 
 ----
 
